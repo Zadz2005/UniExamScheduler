@@ -1,0 +1,107 @@
+/* ExamDetail.css - Additional styles specific to the detail component */
+.detail-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.detail-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  z-index: -1;
+}
+
+.detail-title {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-section {
+  transition: all 0.3s ease;
+}
+
+.detail-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.detail-info-item {
+  transition: all 0.2s ease;
+}
+
+.detail-info-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 0 -0.5rem;
+}
+
+.calendar-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.calendar-button:hover::before {
+  left: 100%;
+}
+
+.back-button {
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+/* Mobile-specific calendar button styles */
+@media (max-width: 768px) {
+  .calendar-button {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .detail-content {
+    gap: 1.5rem;
+  }
+  
+  .detail-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation for loading state */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
