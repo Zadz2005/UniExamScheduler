@@ -45,10 +45,7 @@
 }
 
 .search-form {
-  display: flex;
-  gap: 1rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
 }
 
 .search-input {
@@ -310,7 +307,7 @@
     font-size: 2rem;
   }
   
-  .search-form {
+  .input-wrapper {
     flex-direction: column;
   }
   

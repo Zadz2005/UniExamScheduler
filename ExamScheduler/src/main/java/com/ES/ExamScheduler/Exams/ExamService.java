@@ -26,7 +26,7 @@ public class ExamService {
 
     public List<Exam> getExamsByName(String name) {
         return examRepository.findAll().stream()
-                .filter(exam -> exam.getName().toLowerCase().contains(name.toLowerCase()))
+                .filter(exam -> exam.getName().toLowerCase().startsWith(name.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
@@ -56,7 +56,8 @@ public class ExamService {
     public List<Exam> getExamsByNames(List<String> names) {
         List<String> lowercaseNames = names.stream().map(String::toLowerCase).collect(Collectors.toList());
         return examRepository.findAll().stream()
-                .filter(exam -> lowercaseNames.contains(exam.getName().toLowerCase()))
+                .filter(exam -> lowercaseNames.stream().anyMatch(name -> 
+                    exam.getName().toLowerCase().startsWith(name)))
                 .collect(Collectors.toList());
     }
 }
