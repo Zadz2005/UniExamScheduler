@@ -1,4 +1,4 @@
-package com.ExamSchedule.CityExamScheduler.Exams;
+package com.ES.ExamScheduler.Exams;
 
 
 
