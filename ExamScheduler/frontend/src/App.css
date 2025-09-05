@@ -1,7 +1,9 @@
 /* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #820024 0%, #a0002e 50%, #820024 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -13,12 +15,43 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.App-header h1 {
-  color: white;
-  font-size: 3rem;
-  font-weight: 300;
+/* City Exam Scheduler Logo with alternating red and white bubbly letters */
+.city-logo {
+  font-family: 'Baloo 2', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+
+.city-logo span {
+  display: inline-block;
+  padding: 0.2rem 0.1rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.city-logo span:nth-child(odd) {
+  color: #820024; /* City University of London red */
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.city-logo span:nth-child(even) {
+  color: white;
+  background: rgba(130, 0, 36, 0.8);
+  -webkit-text-stroke: 1px #820024;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.city-logo span:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .App-main {
@@ -60,13 +93,13 @@
 }
 
 .search-input:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #820024;
+  box-shadow: 0 0 0 3px rgba(130, 0, 36, 0.1);
 }
 
 .search-button {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #820024 0%, #a0002e 100%);
   color: white;
   border: none;
   border-radius: 50px;
@@ -75,11 +108,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 120px;
+  box-shadow: 0 4px 8px rgba(130, 0, 36, 0.3);
 }
 
 .search-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 20px rgba(130, 0, 36, 0.4);
+  background: linear-gradient(135deg, #a0002e 0%, #820024 100%);
 }
 
 .search-button:active {
@@ -106,7 +141,7 @@
 .exam-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-color: #667eea;
+  border-color: #820024;
 }
 
 .exam-name {
@@ -182,7 +217,7 @@
   background: #f8f9fa;
   padding: 2rem;
   border-radius: 15px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #820024;
 }
 
 .detail-section h3 {

@@ -60,8 +60,8 @@
 
 .suggestion-item:hover,
 .suggestion-item.selected {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  color: #667eea;
+  background: linear-gradient(135deg, rgba(130, 0, 36, 0.1) 0%, rgba(160, 0, 46, 0.1) 100%);
+  color: #820024;
 }
 
 .suggestion-text {
@@ -131,7 +131,7 @@
 }
 
 .exam-card:hover .exam-name {
-  color: #667eea;
+  color: #820024;
 }
 
 .search-button:disabled {
@@ -159,7 +159,7 @@
   height: 20px;
   margin: -10px 0 0 -10px;
   border: 2px solid #f3f3f3;
-  border-top: 2px solid #667eea;
+  border-top: 2px solid #820024;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
