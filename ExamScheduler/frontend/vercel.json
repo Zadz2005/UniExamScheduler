@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "https://exam-scheduler-backend-production-a98c.up.railway.app/api/v1/exam"
+    }
+  }
+}
+
