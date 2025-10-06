@@ -16,8 +16,8 @@ const ExamSearch = () => {
   const searchInputRef = useRef(null);
   const suggestionsRef = useRef(null);
 
-  // API base URL - adjust this to match your Spring Boot server
-  const API_BASE_URL = 'http://localhost:8080/api/v1/exam';
+  // API base URL - automatically detects environment
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://exam-scheduler-backend-production-a98c.up.railway.app/api/v1/exam';
 
   // Debounce function to limit API calls
   const debounce = (func, delay) => {
